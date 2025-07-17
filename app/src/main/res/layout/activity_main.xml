@@ -1,0 +1,145 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Main Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Total Text -->
+        <TextView
+            android:id="@+id/totalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: 0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Green Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#A5D6A7">
+
+            <Button
+                android:id="@+id/topMinus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="-"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/topCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="40sp"
+                android:layout_marginHorizontal="16dp" />
+
+            <Button
+                android:id="@+id/topPlus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="+"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <!-- Grey Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#BDBDBD">
+
+            <Button
+                android:id="@+id/midMinus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="-"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/midCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="40sp"
+                android:layout_marginHorizontal="16dp" />
+
+            <Button
+                android:id="@+id/midPlus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="+"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <!-- Red Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#EF9A9A">
+
+            <Button
+                android:id="@+id/bottomMinus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="-"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/bottomCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="40sp"
+                android:layout_marginHorizontal="16dp" />
+
+            <Button
+                android:id="@+id/bottomPlus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="+"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textSize="20sp"
+            android:background="#616161"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+    <!-- Floating Points Box -->
+    <TextView
+        android:id="@+id/pointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Points: 0"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:background="#FFA726"
+        android:padding="12dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="top|end"
+        android:elevation="8dp"
+        android:backgroundTintMode="src_in"
+        android:backgroundTint="#FFA726"
+        android:clipToOutline="true" />
+</FrameLayout>
