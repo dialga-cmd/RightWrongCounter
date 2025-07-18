@@ -1,39 +1,64 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/white">
 
-    <!-- Main Layout -->
+    <!-- Top Bar for Total and Points -->
     <LinearLayout
+        android:id="@+id/topBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="@color/orange"
+        android:gravity="center">
 
-        <!-- Total Text -->
         <TextView
-            android:id="@+id/totalText"
+            android:id="@+id/totalBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Total: 0"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <!-- Green Section -->
+        <TextView
+            android:id="@+id/pointsBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Points: (0/100)"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Main Counter Layout -->
+    <LinearLayout
+        android:id="@+id/counterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <!-- Top Section (Green) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#A5D6A7">
+            android:background="@color/greenSection"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/topMinus"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:text="-"
-                android:textSize="28sp" />
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange" />
 
             <TextView
                 android:id="@+id/topCount"
@@ -41,30 +66,37 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textSize="40sp"
-                android:layout_marginHorizontal="16dp" />
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/topPlus"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:text="+"
-                android:textSize="28sp" />
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange" />
         </LinearLayout>
 
-        <!-- Grey Section -->
+        <!-- Middle Section (Gray) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#BDBDBD">
+            android:background="@color/graySection"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/midMinus"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:text="-"
-                android:textSize="28sp" />
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange" />
 
             <TextView
                 android:id="@+id/midCount"
@@ -72,30 +104,37 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textSize="40sp"
-                android:layout_marginHorizontal="16dp" />
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/midPlus"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:text="+"
-                android:textSize="28sp" />
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange" />
         </LinearLayout>
 
-        <!-- Red Section -->
+        <!-- Bottom Section (Red) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#EF9A9A">
+            android:background="@color/redSection"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/bottomMinus"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:text="-"
-                android:textSize="28sp" />
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange" />
 
             <TextView
                 android:id="@+id/bottomCount"
@@ -103,43 +142,40 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textSize="40sp"
-                android:layout_marginHorizontal="16dp" />
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/bottomPlus"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:text="+"
-                android:textSize="28sp" />
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange" />
         </LinearLayout>
-
-        <!-- Reset Button -->
-        <Button
-            android:id="@+id/resetButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Reset"
-            android:textSize="20sp"
-            android:background="#616161"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="8dp" />
-
     </LinearLayout>
 
-    <!-- Floating Points Box -->
-    <TextView
-        android:id="@+id/pointsText"
+    <!-- Floating Buttons -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Points: 0"
-        android:textSize="20sp"
-        android:textColor="#FFFFFF"
-        android:background="#FFA726"
-        android:padding="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:layout_margin="16dp"
-        android:layout_gravity="top|end"
-        android:elevation="8dp"
-        android:backgroundTintMode="src_in"
-        android:backgroundTint="#FFA726"
-        android:clipToOutline="true" />
-</FrameLayout>
+        android:src="@android:drawable/ic_menu_save"
+        app:backgroundTint="@color/orange" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_manage"
+        app:backgroundTint="@color/orange" />
+
+</RelativeLayout>
